@@ -10,11 +10,17 @@ var defaultOptions = {
   engine: 'webkit', // experimental webkit, gecko
   log: 'results.json',
   userAgent: 'Chrome/37.0.2062.120',
-  noExternals: false // --no-externals block requests to 3rd party domains
+  noExternals: false, // --no-externals block requests to 3rd party domains
   performanceBudget: {} // performanceBudget object
 }
 
-funDOMas.analyze({ url: 'http://www.gazzeta.gr'});
+funDOMas.analyze({ 
+  url: 'http://www.gazzeta.gr',
+  performanceBudget: {
+    requests: 200,
+    imageSize: 1000000000
+  }
+});
 
 
 

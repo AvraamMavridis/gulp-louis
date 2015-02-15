@@ -1,6 +1,7 @@
 // Internal dependecies
 var exec = require('child_process').exec;
 var fs = require('fs');
+var perfBudget = require('./performanceBudget');
 // External dependecies
 var _ = require('lodash');
 var clc = require('cli-color');
@@ -22,22 +23,22 @@ function analyze(options){
       console.log(error);
       return false;
     }
-    else{
-      if(options['performanceBudget'].length > 0){
-
-      }
-      else{
+    else {
         fs.readFile('results.json', function(error, data){
           
           data = JSON.parse(data);
           metrics = data.metrics;
 
-          _.each(metrics, function(value, key){
-            console.log(clc.green.bgWhite.underline(key) + clc.red.bgWhite.underline(value));
-          });
-
+          //if the performanceBudget object is not empty analyze based on that
+          if(Object.keys(options['performanceBudget']).length  > 0){
+            perfBudget.checkBudget(options.performanceBudget, data)
+          }
+          else{
+            _.each(metrics, function(value, key){
+              console.log(clc.green.bgWhite.underline(key) + clc.red.bgWhite.underline(value));
+            });
+          }
         });
-      }
     }
   });
 }
