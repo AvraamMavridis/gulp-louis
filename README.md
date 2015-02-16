@@ -18,7 +18,7 @@ The aim of the plugin is to analyze the performance of the website against a per
 #### Installation
 #### 1. [Usage](#usage)
 #### 2. [Example](#example)
-
+#### 3. [Change log](#change-log)
 
 ## Getting Started
 
@@ -32,6 +32,15 @@ $ npm install --save-dev gulp-louis
 ```js
 import louis = require('gulp-louis');
 ```
+### Change log
+#### [0.0.1] - 2015-02-16
+##### Added
+- Change log.
+##### Changed
+- Readme file
+##### Fixed
+- Fix Markdown.
+
 
 
 ## License
