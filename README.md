@@ -1,4 +1,4 @@
-# **Louis **
+# Louis
 
 **Louis** is a gulp task that is used to analyze the performance of a website against a performance budget.
 
@@ -36,8 +36,10 @@ import louis = require('gulp-louis');
 #### [0.0.1] - 2015-02-16
 ##### Added
 - Change log.
+
 ##### Changed
 - Readme file
+
 ##### Fixed
 - Fix Markdown.
 
