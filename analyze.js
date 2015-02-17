@@ -26,7 +26,7 @@ function buildCommand(options){
 
 // Exucute and analyze the resuls
 // {options} object
-function analyze(options){
+function analyze(options, callback){
   command = buildCommand(options);
 
   exec(command + ' --reporter=json > results.json', function(error, stdout, stderr){
@@ -47,13 +47,18 @@ function analyze(options){
           else{
             var m = Object.keys(metrics);
             var m_length = m.length;
+            console.log('\n' + clc.black.bgWhiteBright('Metrics analyzed') + '\n');
             while(m_length--){
-              console.log(clc.green.bgWhite.underline(m[m_length]) + clc.red.bgWhite.underline(metrics[m[m_length]]));
+              console.log(clc.black.bgYellowBright.underline(m[m_length]) + ' ' + clc.yellow.bgBlack(metrics[m[m_length]]));
             }
           }
+
+          callback();
+
         });
     }
   });
+
 }
 
 module.exports = analyze

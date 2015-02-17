@@ -1,19 +1,20 @@
 var joi = require('joi');
 var clc = require('cli-color');
+var gutil = require('gulp-util');
+var PluginError = gutil.PluginError;
+
+const PLUGIN_NAME = 'gulp-louis';
 
 //options schema for validation
 var optionsSchema = {
-  log:               joi.string(),
   url:               joi.string(),
   runs:              joi.number().integer().min(1),
   engine:            joi.string(),
   timeout:           joi.number().integer().min(10),
-  reporter:          joi.string(),
   viewport:          joi.string(),
   userAgent:         joi.string(),
-  consolelog:        joi.boolean(),
   noExternals:       joi.boolean(),
-  performanceBudget: joi.object(),
+  performanceBudget: joi.object()
 }
 
 //performance budget object schema for validation
@@ -153,8 +154,9 @@ function validateHelper(options, schema){
     if(err !== null){
       var length = err.details.length;
       while(length--)
-        console.log(clc.red.bgBlack('Error on options: ' + err.details[length].message));
-        throw new Error(clc.red.bgBlack('Error on options object: '));
+        var message = err.details[length].message
+        console.log(clc.red.bgBlack('Error on options: ' + message));
+        throw new PluginError(PLUGIN_NAME, message);
     }
   });
 }
