@@ -6,10 +6,24 @@ var perfBudget = require('./performanceBudget');
 var _ = require('lodash');
 var clc = require('cli-color');
 
+
+// Config
+var validate = require('./validate');
+
 // Build the phantomas command
 // {options} object
 function buildCommand(options){
+  console.log(options);
+  validate(options);
+
   var command = 'phantomas ' + options.url;
+
+
+  command += ' --engine ' + options.engine;
+  command += ' --runs ' + options.runs;
+  command += ' --timeout ' +  options.timeout;
+  command += ' --viewport ' + options.viewport;
+
   return command;
 }
 
@@ -18,7 +32,7 @@ function buildCommand(options){
 function analyze(options){
   command = buildCommand(options);
 
-  exec(command + ' --reporter=json --run 1 > results.json', function(error, stdout, stderr){
+  exec(command + ' --reporter=json > results.json', function(error, stdout, stderr){
     if(error !== null){
       console.log(error);
       return false;
