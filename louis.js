@@ -1,5 +1,5 @@
 // Internal dependencies
-var funDOMas = require('./funDOMas');
+var analyze = require('./analyze');
 
 var defaultOptions = {
   runs: 1,
@@ -29,7 +29,11 @@ var louis = function(options){
   options.noExternals =       options.noExternals || defaultOptions.noExternals;
   options.performanceBudget = options.performanceBudget || defaultOptions.performanceBudget;
 
-  funDOMas.analyze(options);
+  options.performanceBudget = {
+    requests: 10
+  }
+
+  analyze(options);
 } 
 
 louis();

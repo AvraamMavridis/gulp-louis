@@ -1,11 +1,10 @@
 // Internal dependecies
 var exec = require('child_process').exec;
 var fs = require('fs');
-var perfBudget = require('./performanceBudget');
-// External dependecies
-var _ = require('lodash');
-var clc = require('cli-color');
+var checkBudget = require('./performanceBudget');
 
+// External dependecies
+var clc = require('cli-color');
 
 // Config
 var validate = require('./validate');
@@ -13,11 +12,9 @@ var validate = require('./validate');
 // Build the phantomas command
 // {options} object
 function buildCommand(options){
-  console.log(options);
   validate(options);
 
   var command = 'phantomas ' + options.url;
-
 
   command += ' --engine ' + options.engine;
   command += ' --runs ' + options.runs;
@@ -45,18 +42,18 @@ function analyze(options){
 
           //if the performanceBudget object is not empty analyze based on that
           if(Object.keys(options['performanceBudget']).length  > 0){
-            perfBudget.checkBudget(options.performanceBudget, data)
+            checkBudget(options.performanceBudget, data)
           }
           else{
-            _.each(metrics, function(value, key){
-              console.log(clc.green.bgWhite.underline(key) + clc.red.bgWhite.underline(value));
-            });
+            var m = Object.keys(metrics);
+            var m_length = m.length;
+            while(m_length--){
+              console.log(clc.green.bgWhite.underline(m[m_length]) + clc.red.bgWhite.underline(metrics[m[m_length]]));
+            }
           }
         });
     }
   });
 }
 
-module.exports = {
-  analyze: analyze
-}
+module.exports = analyze
