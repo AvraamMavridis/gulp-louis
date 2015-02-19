@@ -26,16 +26,6 @@ var louis = function(options, callback){
   options.noExternals =       options.noExternals || defaultOptions.noExternals;
   options.performanceBudget = options.performanceBudget || defaultOptions.performanceBudget;
 
-  options.performanceBudget = {
-    requests: 10,
-    medianLatency: 1000,
-    timeToFirstByte: 700,
-    htmlSize: 25000,
-    cacheMisses: 8,
-    gzipRequests: 10,
-    globalVariables: 15
-  }
-
   analyze(options, function(){
     if(!!callback){
       callback();
@@ -43,8 +33,6 @@ var louis = function(options, callback){
   });
 
 } 
-
-louis();
 
 module.exports = louis
 

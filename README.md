@@ -32,6 +32,21 @@ $ npm install --save-dev gulp-louis
 ```js
 import louis = require('gulp-louis');
 ```
+
+### Example
+```js
+import louis = require('gulp-louis');
+
+louis({
+  url: 'http://localhost:8000/',
+  runs: 2,
+  timeout: 200,
+  performanceBudget: {
+    request: 10
+  }
+})
+```
+
 ### Change log
 #### [0.0.1] - 2015-02-16
 ##### Added
