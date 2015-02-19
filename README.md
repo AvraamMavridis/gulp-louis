@@ -3,7 +3,10 @@
 **Louis** is a gulp task that is used to analyze the performance of a website against a performance budget.
 
 [![npm version](https://badge.fury.io/js/gulp-louis.svg)](http://badge.fury.io/js/gulp-louis)
+
 [![NPM](https://nodei.co/npm/gulp-louis.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/gulp-louis/)
+
+[![Build Status](https://travis-ci.org/AvraamMavridis/gulp-louis.svg?branch=master)](https://travis-ci.org/AvraamMavridis/gulp-louis)
 
 **!! WARNING !! ** not stable yet, wait for version 2.0.0
 
