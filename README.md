@@ -2,6 +2,7 @@
 
 **Louis** is a gulp task that is used to analyze the performance of a website against a performance budget.
 
+**!! WARNING !! ** not stable yet, wait for version 2.0.0
 
 ## Introduction
 
