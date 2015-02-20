@@ -21,6 +21,9 @@ function buildCommand(options){
   command += ' --timeout ' +  options.timeout;
   command += ' --viewport ' + options.viewport;
 
+  if(options.noExternals)
+    command += '--no-externals'
+
   return command;
 }
 
@@ -51,10 +54,8 @@ function analyze(options, callback){
             while(m_length--){
               console.log(clc.black.bgYellowBright.underline(m[m_length]) + ' ' + clc.yellow.bgBlack(metrics[m[m_length]]));
             }
+            callback();
           }
-
-          callback();
-
         });
     }
   });

@@ -1,12 +1,11 @@
 // Internal dependencies
 var analyze = require('./analyze');
 // External dependencies
-var through = require('through2');
-var sync = require('sync');
+var connect = require('gulp-connect');
 
 var defaultOptions = {
   runs: 1,
-  url: 'http://www.npmjs.com', // the url to be tested
+  url: 'http://localhost:8888', // the url to be tested
   timeout: 2000, //timeout for phantomas run
   viewport: '1280x1024',
   engine: 'webkit', // experimental webkit, gecko
@@ -17,7 +16,6 @@ var defaultOptions = {
 
 var louis = function(options, callback){
   options =                   options || {};
-  options.url =               options.url || defaultOptions.url;
   options.runs =              options.runs || defaultOptions.runs;
   options.engine =            options.engine || defaultOptions.engine;
   options.timeout =           options.timeout || defaultOptions.timeout;
@@ -26,13 +24,26 @@ var louis = function(options, callback){
   options.noExternals =       options.noExternals || defaultOptions.noExternals;
   options.performanceBudget = options.performanceBudget || defaultOptions.performanceBudget;
 
+  if(!!options.url)
+  {
+    options.url = options.url || defaultOptions.url;
+  }
+  else{
+    options.url = options.url || defaultOptions.url;
+    connect.server({
+      port: 8888
+    });
+  }
+
   analyze(options, function(){
-    if(!!callback){
-      callback();
-    }
+    connect.serverClose();    
   });
 
 } 
+
+louis({
+  url: 'http://www.in.gr'
+});
 
 module.exports = louis
 
