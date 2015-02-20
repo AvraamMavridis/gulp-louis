@@ -64,7 +64,6 @@ louis({
 
 ![Screenshot1](http://oi59.tinypic.com/xg9us6.jpg)
 
-
 ### Change log
 #### [1.0.7] - 2015-02-20
 ##### Added
