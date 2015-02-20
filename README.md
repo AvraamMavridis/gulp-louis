@@ -53,9 +53,18 @@ louis({
   }
 })
 ```
+### Output
+
+*Output with specified performance budget*
+
+![Screenshot1](http://oi62.tinypic.com/ay63nn.jpg)
+
+*Output without specified performance budget*
+
+![Screenshot1](http://oi59.tinypic.com/xg9us6.jpg)
 
 ### Change log
-#### [1.0.6] - 2015-02-16
+#### [1.0.7] - 2015-02-20
 ##### Added
 - Change log.
 
