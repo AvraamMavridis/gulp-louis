@@ -25,7 +25,8 @@ The aim of the plugin is to analyze the performance of the website against a per
 #### Installation
 #### 1. [Usage](#usage)
 #### 2. [Example](#example)
-#### 3. [Change log](#change-log)
+#### 3. [Output])(#output)
+#### 4. [Change log](#change-log)
 
 ## Getting Started
 
@@ -53,9 +54,19 @@ louis({
   }
 })
 ```
+### Output
+
+*Output with specified performance budget*
+
+![Screenshot1](http://oi62.tinypic.com/ay63nn.jpg)
+
+*Output without specified performance budget*
+
+![Screenshot1](http://oi59.tinypic.com/xg9us6.jpg)
+
 
 ### Change log
-#### [1.0.6] - 2015-02-16
+#### [1.0.7] - 2015-02-20
 ##### Added
 - Change log.
 
