@@ -25,7 +25,7 @@ The aim of the plugin is to analyze the performance of the website against a per
 #### Installation
 #### 1. [Usage](#usage)
 #### 2. [Example](#example)
-#### 3. [Output])(#output)
+#### 3. [Output](#output)
 #### 4. [Change log](#change-log)
 
 ## Getting Started
