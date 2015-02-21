@@ -6,8 +6,6 @@
 
 [![NPM](https://nodei.co/npm/gulp-louis.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/gulp-louis/)
 
-[![Build Status](https://travis-ci.org/AvraamMavridis/gulp-louis.svg?branch=master)](https://travis-ci.org/AvraamMavridis/gulp-louis)
-
 ## Introduction
 
 There are many definitions of the **performance budget** on the web, my favourite is from Zachary Brady.
