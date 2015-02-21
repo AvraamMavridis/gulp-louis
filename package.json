@@ -1,6 +1,6 @@
 {
   "name": "gulp-louis",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Performance measurment plugin for gulp based on Phantomas",
   "main": "index.js",
   "scripts": {

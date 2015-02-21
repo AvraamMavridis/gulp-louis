@@ -79,13 +79,12 @@ This will launch a server and look for an **index.html** in the same folder as t
 
 ```js
 louis({
-  url: 'http://localhost:8000/',
   timeout: 10,
   performanceBudget: {
     request: 10
     headersSize: 200
   }
-})
+})```
 
 ### Output
 
@@ -130,6 +129,7 @@ The performance budget option can contain some or all of these values:
 
 
 ### Change log
+#### [1.0.10] - 2015-02-21
 #### [1.0.9] - 2015-02-21
 #### [1.0.8] - 2015-02-20
 #### [1.0.7] - 2015-02-17
