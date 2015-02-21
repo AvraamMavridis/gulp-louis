@@ -1,0 +1,22 @@
+{
+  "name": "gulp-louis",
+  "version": "1.0.9",
+  "description": "Performance measurment plugin for gulp based on Phantomas",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/.bin/mocha"
+  },
+  "keywords": [
+    "perfmatters, phantomas, performance, speed, analyze, website,website performance tools, website performance monitoring, website performance metrics, website performance optimization, website performance analyzer"
+  ],
+  "author": "Avraam Mavridis",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^2.0.0",
+    "cli-color": "^0.3.2",
+    "gulp-util": "^3.0.3",
+    "joi": "^5.1.0",
+    "mocha": "^2.1.0",
+    "phantomas": "^1.9.0"
+  }
+}
