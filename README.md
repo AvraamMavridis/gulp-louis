@@ -84,7 +84,8 @@ louis({
     request: 10
     headersSize: 200
   }
-})```
+})
+```
 
 ### Output
 
