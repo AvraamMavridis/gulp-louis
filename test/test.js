@@ -1,10 +1,20 @@
+// Dependencies
 var validate = require('../validate');
-var assert = require('assert');
 var chai  = require('chai');
 var expect = chai.expect;
 
 options = {
-  url: 'https://www.npmjs.com/'
+  url: 'https://www.npmjs.com/',
+  timeout: 60,
+  viewport: '1280x1024',
+  engine: 'webkit',
+  userAgent: 'Chrome/37.0.2062.120',
+  noExternals: false,
+  performanceBudget: {
+    requests: 2,
+    medianLatency: 10,
+    slowestResponse: 1000
+  }
 }
 
 options2 = {
@@ -19,8 +29,7 @@ describe('Validation', function(){
 })
 
 describe('Validation', function(){
-  it('should return throw an exception when the options are not valid', function(){
-    validation = validate(options2);
-    expect(validation).to.be.false;
+  it('should throw an exception when the options are not valid', function(){
+    expect(validate).to.throw(Error)
   })
 })

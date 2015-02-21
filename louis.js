@@ -6,7 +6,7 @@ var connect = require('gulp-connect');
 var defaultOptions = {
   runs: 1,
   url: 'http://localhost:8888', // the url to be tested
-  timeout: 2000, //timeout for phantomas run
+  timeout: 15, //timeout for phantomas run
   viewport: '1280x1024',
   engine: 'webkit', // experimental webkit, gecko
   userAgent: 'Chrome/37.0.2062.120',
@@ -16,7 +16,7 @@ var defaultOptions = {
 
 var louis = function(options, callback){
   options =                   options || {};
-  options.runs =              options.runs || defaultOptions.runs;
+  options.runs =              defaultOptions.runs;
   options.engine =            options.engine || defaultOptions.engine;
   options.timeout =           options.timeout || defaultOptions.timeout;
   options.viewport =          options.viewport || defaultOptions.viewport;

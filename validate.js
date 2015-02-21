@@ -7,6 +7,7 @@ const PLUGIN_NAME = 'gulp-louis';
 
 //options schema for validation
 var optionsSchema = {
+  runs:              joi.number(),
   url:               joi.string(),
   engine:            joi.string(),
   timeout:           joi.number().integer().min(10),

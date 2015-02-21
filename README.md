@@ -8,8 +8,6 @@
 
 [![Build Status](https://travis-ci.org/AvraamMavridis/gulp-louis.svg?branch=master)](https://travis-ci.org/AvraamMavridis/gulp-louis)
 
-**!! WARNING !! ** not stable yet, wait for version 2.0.0
-
 ## Introduction
 
 There are many definitions of the **performance budget** on the web, my favourite is from Zachary Brady.
@@ -62,18 +60,33 @@ gulp.task('default', ['louis']);
 
 
 ### Example
-```js
-import louis = require('gulp-louis');
 
+*Example 1 (with specified url)*
+
+```js
 louis({
   url: 'http://localhost:8000/',
-  runs: 2,
   timeout: 200,
   performanceBudget: {
     request: 10
+    domComplete: 3000
   }
 })
 ```
+
+*Example 2 (without url)*
+This will launch a server and look for an **index.html** in the same folder as the gulpfile.js, then it will analyze the performance of this website.
+
+```js
+louis({
+  url: 'http://localhost:8000/',
+  timeout: 10,
+  performanceBudget: {
+    request: 10
+    headersSize: 200
+  }
+})
+
 ### Output
 
 *Output with specified performance budget*
@@ -99,7 +112,7 @@ louis({
 
 ### Performance Budget Options
 
-The performance budget option can contain some or all of this values:
+The performance budget option can contain some or all of these values:
 
   ```requests, gzipRequests, postRequests, httpsRequests, notFound, bodySize, contentLength, httpTrafficCompleted, timeToFirstByte, timeToLastByte, ajaxRequests, htmlCount, htmlSize, cssCount, cssSize, jsCount, jsSize, jsonCount, jsonSize, imageCount, imageSize, videoCount, videoSize, webfontCount, webfontSize, base64Count, base64Size, otherCount, otherSize, cacheHits, cacheMisses, cachePasses, cachingNotSpecified, cachingTooShort, cachingDisabled, oldCachingHeaders, consoleMessages, cookiesSent, cookiesRecv, domainsWithCookies, documentCookiesLength, documentCookiesCount, documentHeight, commentsSize, whiteSpacesSize, DOMelementsCount, DOMelementMaxDepth, nodesWithInlineCSS, imagesScaledDown, imagesWithoutDimensions, DOMidDuplicated, hiddenContentSize, DOMmutationsInsertsv, DOMmutationsRemoves, DOMmutationsAttributes, DOMqueries, DOMqueriesWithoutResults, DOMqueriesById, DOMqueriesByClassName, DOMqueriesByTagName, DOMqueriesByQuerySelectorAll , DOMinserts, DOMqueriesDuplicated, DOMqueriesAvoidable, domains, maxRequestsPerDomain, medianRequestsPerDomain, eventsBound, eventsDispatched, globalVariables, globalVariablesFalsy, headersCount, headersSentCount, headersRecvCount, headersSize, headersSentSize, headersRecvSize, headersBiggerThanContent, jQueryVersion, jQueryVersionsLoaded, jQueryOnDOMReadyFunctions, jQueryWindowOnLoadFunctions, jQuerySizzleCalls, jQueryEventTriggers, jQueryDOMReads, jQueryDOMWrites, jQueryDOMWriteReadSwitches, documentWriteCalls, evalCalls, jsErrors, closedConnections, localStorageEntries, redirects, redirectsTime, repaints, firstPaint, requestsToDomContentLoaded, requestsToDomComplete, assetsNotGzipped, assetsWithQueryString, assetsWithCookies, smallImages, smallCssFiles, smallJsFiles, multipleRequests, timeToFirstCss, timeToFirstJs, timeToFirstImage, domInteractive, domContentLoaded, domContentLoadedEnd, domComplete, timeBackend, timeFrontend, statusCodesTrail, windowAlerts, windowConfirms, windowPrompts, bodyHTMLSize, iframesCount, smallestResponse, biggestResponse, fastestResponse, slowestResponse, smallestLatency, biggestLatency, medianResponse, medianLatency```
 
@@ -117,16 +130,10 @@ The performance budget option can contain some or all of this values:
 
 
 ### Change log
-#### [1.0.7] - 2015-02-20
-##### Added
-- Change log.
-
-##### Changed
-- Readme file
-
-##### Fixed
-- Fix Markdown.
-
+#### [1.0.9] - 2015-02-21
+#### [1.0.8] - 2015-02-20
+#### [1.0.7] - 2015-02-17
+#### [1.0.0] - 2015-02-16
 
 
 ## License
