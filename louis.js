@@ -41,10 +41,6 @@ var louis = function(options, callback){
 
 } 
 
-louis({
-  url: 'http://www.in.gr'
-});
-
 module.exports = louis
 
 
