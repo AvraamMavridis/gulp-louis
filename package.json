@@ -8,7 +8,7 @@
   },
   "author": "Avraam Mavridis <avr.mav@gmail.com> (https://github.com/AvraamMavridis)",
   "description": "Performance measurment plugin for gulp based on Phantomas",
-  "main": "index.js",
+  "main": "louis.js",
   "scripts": {
     "test": "node node_modules/.bin/mocha"
   },
