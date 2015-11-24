@@ -128,7 +128,7 @@ The performance budget option can contain some or all of these values:
 
 
 ### Change log
-#### [1.0.11] - 2015-11-23
+#### [1.0.14] - 2015-11-23
 Bug Fixes
 -Fix path to phantomas command …
 -Add missing gulp-connect dependency
