@@ -144,3 +144,7 @@ Bug Fixes
 ## License
 
 Released under the MIT license.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/AvraamMavridis/gulp-louis/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
