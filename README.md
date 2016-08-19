@@ -129,7 +129,7 @@ The performance budget option can contain some or all of these values:
 
 ### Change log
 
-#### [1.1.0] - 2015-08-19
+#### [1.1.0] - 2016-08-19
 
 - Fix phantomas path
 
