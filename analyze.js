@@ -14,7 +14,7 @@ var validate = require('./validate');
 function buildCommand(options){
   validate(options);
 
-  var command = __dirname + '/node_modules/.bin/phantomas ' + options.url;
+  var command = 'phantomas ' + options.url;
 
   command += ' --engine ' + options.engine;
   command += ' --runs ' + options.runs;

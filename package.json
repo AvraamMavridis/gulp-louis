@@ -18,8 +18,8 @@
   "author": "Avraam Mavridis",
   "license": "ISC",
   "dependencies": {
-    "cli-color": "^0.3.2",
-    "gulp-connect": "^2.2.0",
+    "cli-color": "^1.1.0",
+    "gulp-connect": "^5.0.0",
     "gulp-util": "^3.0.3",
     "joi": "^5.1.0",
     "phantomas": "^1.9.0"
