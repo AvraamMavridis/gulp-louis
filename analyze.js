@@ -14,7 +14,7 @@ var validate = require('./validate');
 function buildCommand(options){
   validate(options);
 
-  var command = 'phantomas ' + options.url;
+  var command = 'node node_modules/phantomas/bin/phantomas.js ' + options.url;
 
   command += ' --engine ' + options.engine;
   command += ' --runs ' + options.runs;
@@ -39,7 +39,7 @@ function analyze(options, callback){
     }
     else {
         fs.readFile('results.json', function(error, data){
-          
+
           data = JSON.parse(data);
           metrics = data.metrics;
 
