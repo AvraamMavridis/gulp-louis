@@ -129,6 +129,11 @@ The performance budget option can contain some or all of these values:
 
 ### Change log
 
+#### [2.1.0] - 2016-08-29
+
+- Run phantomas from local path
+- Update depedencies
+
 #### [1.1.0] - 2016-08-19
 
 - Fix phantomas path
