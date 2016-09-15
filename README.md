@@ -129,7 +129,11 @@ The performance budget option can contain some or all of these values:
 
 ### Change log
 
-#### [2.1.0] - 2016-08-29
+#### [2.1.0] - 2016-09-15
+
+- Change the results.json to a file with the same of tested domain.
+
+#### [2.0.0] - 2016-08-29
 
 - Run phantomas from local path
 - Update depedencies
