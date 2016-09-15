@@ -30,15 +30,18 @@ function buildCommand(options){
 // Exucute and analyze the resuls
 // {options} object
 function analyze(options, callback){
+
   command = buildCommand(options);
 
-  exec(command + ' --reporter=json > results.json', function(error, stdout, stderr){
+  var outPutFileName = (options.url) ? options.url.replace(/^(https?|ftp):\/\//, '') + '.json' : 'results.json';
+
+  exec(command + ' --reporter=json > ' + outPutFileName, function(error, stdout, stderr){
     if(error !== null){
       console.log(error);
       return false;
     }
     else {
-        fs.readFile('results.json', function(error, data){
+        fs.readFile(outPutFileName, function(error, data){
 
           data = JSON.parse(data);
           metrics = data.metrics;
