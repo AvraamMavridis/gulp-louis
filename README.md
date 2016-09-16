@@ -129,6 +129,10 @@ The performance budget option can contain some or all of these values:
 
 ### Change log
 
+#### [2.1.1] - 2016-09-16
+
+- Update dependencies
+
 #### [2.1.0] - 2016-09-15
 
 - Change the results.json to a file with the same of tested domain.
