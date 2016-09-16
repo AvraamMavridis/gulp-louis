@@ -1,6 +1,6 @@
 {
   "name": "gulp-louis",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "homepage": "https://github.com/AvraamMavridis/gulp-louis",
   "repository": {
     "type": "git",
@@ -20,12 +20,12 @@
     "cli-color": "^1.1.0",
     "gulp-connect": "^5.0.0",
     "gulp-util": "^3.0.7",
-    "joi": "^5.1.0",
+    "joi": "^9.0.4",
     "phantomas": "^1.16.0"
   },
   "devDependencies": {
-    "chai": "^2.0.0",
+    "chai": "^3.5.0",
     "gulp": "^3.9.1",
-    "mocha": "^2.1.0"
+    "mocha": "^3.0.2"
   }
 }
