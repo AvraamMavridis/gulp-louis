@@ -66,7 +66,7 @@ louis({
   url: 'http://localhost:8000/',
   timeout: 200,
   performanceBudget: {
-    request: 10
+    requests: 10,
     domComplete: 3000
   }
 })
@@ -79,7 +79,7 @@ This will launch a server and look for an **index.html** in the same folder as t
 louis({
   timeout: 10,
   performanceBudget: {
-    request: 10
+    requests: 10,
     headersSize: 200
   }
 })
