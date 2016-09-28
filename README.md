@@ -106,6 +106,7 @@ louis({
 * `engine` webkit or gecko (webkit is default)
 * `userAgent` default is Chrome/37.0.2062.120
 * `noExternals` true or false, default is false, block requests to 3rd party domains
+* `outputFileName` name of file to write the results, default is "results.json"
 * `performanceBudget` object with metrics, see below
 
 ### Performance Budget Options
