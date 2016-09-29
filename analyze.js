@@ -21,6 +21,9 @@ function buildCommand(options){
   command += ' --timeout ' +  options.timeout;
   command += ' --viewport ' + options.viewport;
 
+  if(options.proxy)
+    command += ' --proxy ' + options.proxy;
+
   if(options.noExternals)
     command += '--no-externals'
 
