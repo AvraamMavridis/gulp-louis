@@ -21,11 +21,11 @@
     "gulp-connect": "^5.0.0",
     "gulp-util": "^3.0.7",
     "joi": "^9.0.4",
-    "phantomas": "^1.16.0"
+    "phantomas": "^1.17.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
-    "mocha": "^3.0.2"
+    "mocha": "^3.1.0"
   }
 }
