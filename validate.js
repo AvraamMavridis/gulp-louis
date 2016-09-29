@@ -14,6 +14,7 @@ var optionsSchema = {
   viewport:          joi.string(),
   userAgent:         joi.string(),
   noExternals:       joi.boolean(),
+  outputFileName:    joi.string(),
   performanceBudget: joi.object()
 }
 

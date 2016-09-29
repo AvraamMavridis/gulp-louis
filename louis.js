@@ -5,6 +5,7 @@ var connect = require('gulp-connect');
 
 var defaultOptions = {
   runs: 1,
+  outputFileName: 'results.json',
   url: 'http://localhost:8888', // the url to be tested
   timeout: 15, //timeout for phantomas run
   viewport: '1280x1024',
@@ -23,6 +24,8 @@ var louis = function(options, callback){
   options.userAgent =         options.userAgent || defaultOptions.userAgent;
   options.noExternals =       options.noExternals || defaultOptions.noExternals;
   options.performanceBudget = options.performanceBudget || defaultOptions.performanceBudget;
+  options.outputFileName =   (options.outputFileName) ? options.outputFileName :
+      (options.url) ? options.url.replace(/^(https?|ftp):\/\//, '') + '.json' :  defaultOptions.outputFileName;
 
   if(!!options.url)
   {
@@ -42,5 +45,3 @@ var louis = function(options, callback){
 } 
 
 module.exports = louis
-
-
