@@ -7,7 +7,7 @@ var defaultOptions = {
   runs: 1,
   outputFileName: 'results.json',
   url: 'http://localhost:8888', // the url to be tested
-  timeout: 15, //timeout for phantomas run
+  timeout: 15, // timeout for phantomas run
   viewport: '1280x1024',
   engine: 'webkit', // experimental webkit, gecko
   userAgent: 'Chrome/37.0.2062.120',
