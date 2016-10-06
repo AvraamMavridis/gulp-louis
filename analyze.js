@@ -1,9 +1,9 @@
-// Internal dependecies
+// Internal dependencies
 var exec = require('child_process').exec;
 var fs = require('fs');
 var checkBudget = require('./performanceBudget');
 
-// External dependecies
+// External dependencies
 var clc = require('cli-color');
 
 // Config
@@ -21,13 +21,16 @@ function buildCommand(options){
   command += ' --timeout ' +  options.timeout;
   command += ' --viewport ' + options.viewport;
 
+  if(options.proxy)
+    command += ' --proxy ' + options.proxy;
+
   if(options.noExternals)
     command += '--no-externals'
 
   return command;
 }
 
-// Exucute and analyze the resuls
+// Execute and analyze the results
 // {options} object
 function analyze(options, callback){
 

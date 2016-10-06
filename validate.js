@@ -15,7 +15,8 @@ var optionsSchema = {
   userAgent:         joi.string(),
   noExternals:       joi.boolean(),
   outputFileName:    joi.string(),
-  performanceBudget: joi.object()
+  performanceBudget: joi.object(),
+  proxy:             joi.string()
 }
 
 //performance budget object schema for validation

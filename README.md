@@ -108,6 +108,7 @@ louis({
 * `noExternals` true or false, default is false, block requests to 3rd party domains
 * `outputFileName` name of file to write the results, default is "results.json"
 * `performanceBudget` object with metrics, see below
+* `proxy` specifies the (optional) proxy server to use
 
 ### Performance Budget Options
 

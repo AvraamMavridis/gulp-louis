@@ -7,7 +7,8 @@ var defaultOptions = {
   runs: 1,
   outputFileName: 'results.json',
   url: 'http://localhost:8888', // the url to be tested
-  timeout: 15, //timeout for phantomas run
+  proxy: undefined, // the proxy server to use
+  timeout: 15, // timeout for phantomas run
   viewport: '1280x1024',
   engine: 'webkit', // experimental webkit, gecko
   userAgent: 'Chrome/37.0.2062.120',
@@ -26,6 +27,7 @@ var louis = function(options, callback){
   options.performanceBudget = options.performanceBudget || defaultOptions.performanceBudget;
   options.outputFileName =   (options.outputFileName) ? options.outputFileName :
       (options.url) ? options.url.replace(/^(https?|ftp):\/\//, '') + '.json' :  defaultOptions.outputFileName;
+  options.proxy =             options.proxy || defaultOptions.proxy;
 
   if(!!options.url)
   {
