@@ -131,6 +131,18 @@ The performance budget option can contain some or all of these values:
 
 ### Change log
 
+#### [2.3.0] - 2016-10-07
+
+- Added proxy-option
+
+#### [2.2.1] - 2016-09-29
+
+- Update dependencies
+
+#### [2.2.0] - 2016-09-29
+
+- Add outputFilename-option
+
 #### [2.1.1] - 2016-09-16
 
 - Update dependencies
