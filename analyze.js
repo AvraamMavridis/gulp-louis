@@ -25,7 +25,7 @@ function buildCommand(options){
     command += ' --proxy ' + options.proxy;
 
   if(options.noExternals)
-    command += '--no-externals'
+    command += ' --no-externals';
 
   return command;
 }
