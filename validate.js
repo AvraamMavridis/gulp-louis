@@ -1,7 +1,6 @@
 var joi = require('joi');
 var clc = require('cli-color');
-var gutil = require('gulp-util');
-var PluginError = gutil.PluginError;
+var PluginError = require('plugin-error');
 
 const PLUGIN_NAME = 'gulp-louis';
 
