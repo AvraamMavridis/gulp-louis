@@ -14,7 +14,7 @@ var defaultOptions = {
   userAgent: 'Chrome/37.0.2062.120',
   noExternals: false, // --no-externals block requests to 3rd party domains
   performanceBudget: {} // performanceBudget object
-}
+};
 
 var louis = function(options, callback){
   options =                   options || {};
@@ -29,8 +29,7 @@ var louis = function(options, callback){
       (options.url) ? options.url.replace(/^(https?|ftp):\/\//, '') + '.json' :  defaultOptions.outputFileName;
   options.proxy =             options.proxy || defaultOptions.proxy;
 
-  if(!!options.url)
-  {
+  if(!!options.url){
     options.url = options.url || defaultOptions.url;
   }
   else{
@@ -43,7 +42,6 @@ var louis = function(options, callback){
   analyze(options, function(){
     connect.serverClose();    
   });
+};
 
-} 
-
-module.exports = louis
+module.exports = louis;
