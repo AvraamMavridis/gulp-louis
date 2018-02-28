@@ -15,21 +15,21 @@ options = {
     medianLatency: 10,
     slowestResponse: 1000
   }
-}
+};
 
 options2 = {
   someInvalid: 'invalid'
-}
+};
 
 describe('Validation', function(){
   it('should return true when the options are valid', function(){
     validation = validate(options);
     expect(validation).to.be.true;
   })
-})
+});
 
 describe('Validation', function(){
   it('should throw an exception when the options are not valid', function(){
     expect(validate).to.throw(Error)
   })
-})
+});

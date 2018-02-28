@@ -41,29 +41,28 @@ function analyze(options, callback){
       console.log(error);
       return false;
     }
-    else {
-        fs.readFile(options.outputFileName, function(error, data){
+    else{
+      fs.readFile(options.outputFileName, function(error, data){
 
-          data = JSON.parse(data);
-          metrics = data.metrics;
+        data = JSON.parse(data);
+        metrics = data.metrics;
 
-          //if the performanceBudget object is not empty analyze based on that
-          if(Object.keys(options['performanceBudget']).length  > 0){
-            checkBudget(options.performanceBudget, data)
+        //if the performanceBudget object is not empty analyze based on that
+        if(Object.keys(options['performanceBudget']).length  > 0){
+          checkBudget(options.performanceBudget, data)
+        }
+        else{
+          var m = Object.keys(metrics);
+          var m_length = m.length;
+          console.log('\n' + clc.black.bgWhiteBright('Metrics analyzed') + '\n');
+          while(m_length--){
+            console.log(clc.black.bgYellowBright.underline(m[m_length]) + ' ' + clc.yellow.bgBlack(metrics[m[m_length]]));
           }
-          else{
-            var m = Object.keys(metrics);
-            var m_length = m.length;
-            console.log('\n' + clc.black.bgWhiteBright('Metrics analyzed') + '\n');
-            while(m_length--){
-              console.log(clc.black.bgYellowBright.underline(m[m_length]) + ' ' + clc.yellow.bgBlack(metrics[m[m_length]]));
-            }
-            callback();
-          }
-        });
+          callback();
+        }
+      });
     }
   });
-
 }
 
-module.exports = analyze
+module.exports = analyze;
