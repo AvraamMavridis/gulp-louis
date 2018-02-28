@@ -10,10 +10,22 @@
   "description": "Performance measurment plugin for gulp based on Phantomas",
   "main": "louis.js",
   "scripts": {
-    "test": "node node_modules/.bin/mocha"
+    "test": "mocha"
   },
   "keywords": [
-    "perfmatters, phantomas, performance, speed, analyze, website,website performance tools, website performance monitoring, website performance metrics, website performance optimization, website performance analyzer"
+    "gulpplugin",
+    "gulp",
+    "perfmatters",
+    "phantomas",
+    "performance",
+    "speed",
+    "analyze",
+    "website",
+    "website performance tools",
+    "website performance monitoring",
+    "website performance metrics",
+    "website performance optimization",
+    "website performance analyzer"
   ],
   "license": "ISC",
   "dependencies": {
