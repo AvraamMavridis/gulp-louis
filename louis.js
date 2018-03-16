@@ -10,37 +10,41 @@ var defaultOptions = {
   proxy: undefined, // the proxy server to use
   timeout: 15, // timeout for phantomas run
   viewport: '1280x1024',
-  engine: 'webkit', // experimental webkit, gecko
+  // engine: 'webkit', // experimental webkit, gecko
   userAgent: 'Chrome/37.0.2062.120',
   noExternals: false, // --no-externals block requests to 3rd party domains
   performanceBudget: {} // performanceBudget object
 };
 
-var louis = function(options, callback){
-  options =                   options || {};
-  options.runs =              defaultOptions.runs;
-  options.engine =            options.engine || defaultOptions.engine;
-  options.timeout =           options.timeout || defaultOptions.timeout;
-  options.viewport =          options.viewport || defaultOptions.viewport;
-  options.userAgent =         options.userAgent || defaultOptions.userAgent;
-  options.noExternals =       options.noExternals || defaultOptions.noExternals;
-  options.performanceBudget = options.performanceBudget || defaultOptions.performanceBudget;
-  options.outputFileName =   (options.outputFileName) ? options.outputFileName :
-      (options.url) ? options.url.replace(/^(https?|ftp):\/\//, '') + '.json' :  defaultOptions.outputFileName;
-  options.proxy =             options.proxy || defaultOptions.proxy;
+var louis = function(options, callback) {
+  options = options || {};
+  options.runs = defaultOptions.runs;
+  // options.engine = options.engine || defaultOptions.engine;
+  options.timeout = options.timeout || defaultOptions.timeout;
+  options.viewport = options.viewport || defaultOptions.viewport;
+  options.userAgent = options.userAgent || defaultOptions.userAgent;
+  options.noExternals = options.noExternals || defaultOptions.noExternals;
+  options.performanceBudget =
+    options.performanceBudget || defaultOptions.performanceBudget;
+  options.outputFileName = options.outputFileName
+    ? options.outputFileName
+    : options.url
+      ? options.url.replace(/^(https?|ftp):\/\//, '').replace(/\//, '') +
+        '.json'
+      : defaultOptions.outputFileName;
+  options.proxy = options.proxy || defaultOptions.proxy;
 
-  if(!!options.url){
+  if (!!options.url) {
     options.url = options.url || defaultOptions.url;
-  }
-  else{
+  } else {
     options.url = options.url || defaultOptions.url;
     connect.server({
       port: 8888
     });
   }
 
-  analyze(options, function(){
-    connect.serverClose();    
+  analyze(options, function() {
+    connect.serverClose();
   });
 };
 
