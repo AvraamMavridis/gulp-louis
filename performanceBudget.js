@@ -19,6 +19,6 @@ var checkBudget = function(budgetOptions, data){
                   clc.green.bgWhiteBright.underline(' Actual = ' + metrics[b_options[b_length]])); 
     }
     delete metrics[b_options[b_length]];
-}
+};
 
 module.exports = checkBudget;

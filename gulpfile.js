@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var louis = require('./louis');
 
-
 gulp.task('louis', function() {
   louis({
     timeout: 60,
