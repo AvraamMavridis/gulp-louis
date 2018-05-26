@@ -101,8 +101,8 @@ louis({
 **All options are optional**
 
 * `url` url of the website to be analyzed, if it is not specified **Louis** will launch a server and load the **index.html** if this exist on the same directory as the **gulpfile.js**
-* ` timeout ` timeout for the run (defaults to 15 seconds)
-* `viewport dimensions ('1280x1024' is the default)
+* `timeout` timeout for the run (defaults to 15 seconds)
+* `viewport` dimensions ('1280x1024' is the default)
 * `engine` webkit or gecko (webkit is default)
 * `userAgent` default is Chrome/37.0.2062.120
 * `noExternals` true or false, default is false, block requests to 3rd party domains
@@ -130,6 +130,10 @@ The performance budget option can contain some or all of these values:
 
 
 ### Change log
+
+#### [2.3.1] - 2018-02-28
+
+- Update depedencies
 
 #### [2.3.0] - 2016-10-07
 
