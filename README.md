@@ -131,9 +131,13 @@ The performance budget option can contain some or all of these values:
 
 ### Change log
 
+#### [2.3.2] - 2018-03-16
+
+- Fix / appended to outputFile causing throw in unix systems
+
 #### [2.3.1] - 2018-02-28
 
-- Update depedencies
+- Update dependencies
 
 #### [2.3.0] - 2016-10-07
 
@@ -165,6 +169,7 @@ The performance budget option can contain some or all of these values:
 - Fix phantomas path
 
 #### [1.0.14] - 2015-11-23
+
 Bug Fixes
 
 - Fix path to phantomas command …
