@@ -38,7 +38,7 @@ $ npm install --save-dev gulp-louis
 ```js
 import louis = require('gulp-louis');
 
-gulp.task('louis', function() {
+gulp.task('louis', function(done) {
   louis({
     timeout: 60,
     viewport: '1280x1024',
@@ -50,7 +50,7 @@ gulp.task('louis', function() {
       medianLatency: 10,
       slowestResponse: 1000
     }
-  });
+  }, done);
 });
 
 gulp.task('default', ['louis']);

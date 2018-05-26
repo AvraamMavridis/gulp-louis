@@ -45,6 +45,8 @@ var louis = function(options, callback) {
 
   analyze(options, function() {
     connect.serverClose();
+    if (callback)
+      callback();
   });
 };
 
