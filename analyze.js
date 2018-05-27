@@ -48,6 +48,7 @@ function analyze(options, callback) {
         //if the performanceBudget object is not empty analyze based on that
         if (Object.keys(options['performanceBudget']).length > 0) {
           checkBudget(options.performanceBudget, data);
+          callback();
         } else {
           var m = Object.keys(metrics);
           var m_length = m.length;
