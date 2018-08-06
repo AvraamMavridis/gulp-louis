@@ -4,7 +4,7 @@
 
 [![npm version](https://badge.fury.io/js/gulp-louis.svg)](http://badge.fury.io/js/gulp-louis)
 
-[![NPM](https://nodei.co/npm/gulp-louis.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/gulp-louis/)
+[![NPM](https://nodei.co/npm/gulp-louis.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/gulp-louis/) [![Greenkeeper badge](https://badges.greenkeeper.io/AvraamMavridis/gulp-louis.svg)](https://greenkeeper.io/)
 
 ## Introduction
 
