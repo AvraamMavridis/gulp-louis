@@ -31,7 +31,7 @@
   "dependencies": {
     "cli-color": "^1.4.0",
     "gulp-connect": "^5.7.0",
-    "joi": "^14.3.0",
+    "joi": "^14.3.1",
     "phantomas": "^1.20.1",
     "plugin-error": "^1.0.1"
   },
