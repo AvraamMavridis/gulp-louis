@@ -29,7 +29,7 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "cli-color": "^1.4.0",
+    "cli-color": "^2.0.0",
     "gulp-connect": "^5.7.0",
     "joi": "^14.3.1",
     "phantomas": "^1.20.1",
